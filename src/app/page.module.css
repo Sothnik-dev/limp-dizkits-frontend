@@ -1,0 +1,25 @@
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.upperTextL {
+    padding: 1rem;
+
+    font-size: 4rem;
+    width: 30rem;
+
+    line-height: 150%;
+}
+
+.upperTextR {
+    padding: 1rem;
+
+    font-size: 4rem;
+    width: 35rem;
+    text-align: end;
+
+    line-height: 150%;
+
+}
