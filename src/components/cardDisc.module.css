@@ -1,0 +1,33 @@
+.cardContainer {
+    width: 716px;
+    height: 974px;
+
+    background-color: #FAF4F4;
+    filter: drop-shadow(0px 0px 4px #000000);
+
+    border-radius: 12px;
+
+    margin-left: 1rem;
+}
+
+.mainImage {
+    width: 650px;
+    height: 416px;
+
+    border-radius: 12px;
+    filter: blur(2px);
+
+    object-fit: cover;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.spaceCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
