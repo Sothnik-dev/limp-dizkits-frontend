@@ -6,13 +6,14 @@ import Image from 'next/image';
 
 import CardDisc from '@/components/cardDisc';
 
-export default async function Home() {
+async function GetApiValue() {
+    const apiValue = await axios.get('http://localhost:8080/disc/all')
+    return apiValue.data;
+}
 
-    const responseApi = await axios.get("http://localhost:8080/disc/all")
-    .then((disc) => console.log(disc.data))
-    .catch(() => console.log('Não foi possivel contatar a API'));
+export default async function Home() {        
+    const postData = await GetApiValue();
 
-        
     return (
         <html>
             <body>
@@ -33,7 +34,15 @@ export default async function Home() {
                     </div>
                 </main>    
                 <section> 
-                    <CardDisc title={'teste'}></CardDisc>
+                    {postData.map((post: any) => {
+                        return <CardDisc 
+                            title={post.discTitle}
+                            desc={post.discDescription}
+                            price={post.discValue}
+                            amount={post.discAmount}
+                            img={post.discImage}
+                        />
+                    })}
                 </section>
             </body>
         </html>

@@ -20,6 +20,20 @@
     object-fit: cover;
 }
 
+.discImage {
+    position: absolute;
+    width: 400px;
+    height: 250px;
+}
+
+.innerImage{
+    position: absolute;
+    width: 70px;
+    height: 70px;
+
+    border-radius: 5rem;
+}
+
 .spaceBetween {
     display: flex;
     justify-content: space-between;
