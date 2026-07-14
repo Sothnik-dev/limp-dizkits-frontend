@@ -1,18 +1,20 @@
 .cardContainer {
-    width: 716px;
-    height: 974px;
+    width: 400px;
+    height: 550px;
 
     background-color: #FAF4F4;
-    filter: drop-shadow(0px 0px 4px #000000);
+    filter: drop-shadow(0px 0px 2px #000000);
 
     border-radius: 12px;
 
     margin-left: 1rem;
+
+    font-size: 12px;
 }
 
 .mainImage {
-    width: 650px;
-    height: 416px;
+    width: 450px;
+    height: 250px;
 
     border-radius: 12px;
     filter: blur(2px);
@@ -20,24 +22,90 @@
     object-fit: cover;
 }
 
+@keyframes rollingAnim {
+    0% {
+        transform: rotate(0deg);
+    } 100% {
+        transform: rotate(360deg);
+    }
+}
+
 .discImage {
     position: absolute;
-    width: 400px;
-    height: 250px;
+    width: 210px;
+    height: 140px;
 }
 
 .innerImage{
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 45px;
+    height: 45px;
 
     border-radius: 5rem;
 }
 
-.spaceBetween {
+
+
+.discImage:hover{
+    animation: rollingAnim 5s infinite linear;
+}
+
+.discPoint {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+
+    border-radius: 12px;
+
+    background-color: white;
+}
+
+.title {
+    font-size: 2rem;
+
+    margin-top: 6px;
+    padding: 6px;
+}
+
+.desc {
+    font-size: 1rem;
+
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.btnStyle {
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 1rem;
+    margin-top: 2rem;
+
+    border-radius: 12px;
+    border: none;
+
+    background-color: #e2e2e2;
+
+    cursor: pointer;
+}
+
+.btnStyle:hover {
+    transition: 0.5s;
+
+    transform: scale(1.1);
+    background-color: crimson;
+    color: #000000;
+}
+
+.btnStyle:not(:hover) {
+    transition: 0.5s;
+}
+
+.infoSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 10px;
 }
 
 .spaceCenter {

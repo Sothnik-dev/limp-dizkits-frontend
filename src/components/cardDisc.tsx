@@ -7,21 +7,22 @@ const CardDisc = (props: any) => {
                 <img className={styles.mainImage} src={props.img} alt="mainImage" />
                 <img className={styles.discImage} src="/vinilBaseupd.png" alt="vinil disc" />
                 <img className={styles.innerImage} src={props.img} alt="innerImage" />
+                <div className={styles.discPoint}></div>
             </div>
             <div>
                 <div>
-                    <h1>{props.title}</h1>
-                    <h1>{props.desc}</h1>
+                    <h1 className={styles.title}>{props.title}</h1>
+                    <h1 className={styles.desc}>{props.desc}</h1>
                 </div>
             </div>
             <div>
-                <div className={styles.spaceBetween}>
+                <div className={styles.infoSection}>
                     <h1>R$ {props.price}</h1>
                     <h1>{props.amount} unidades</h1>
                 </div>
             </div>
-            <div>
-                <button>Comprar</button>
+            <div className={styles.spaceCenter}>
+                <button className={styles.btnStyle}>Compre aqui</button>
             </div>
         </div>
     );

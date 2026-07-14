@@ -33,9 +33,10 @@ export default async function Home() {
                         <h1 className={styles.upperTextR}> com Limp Dizkits que consegue converter um quarto naquele veridico estúdio</h1>
                     </div>
                 </main>    
-                <section> 
+                <section className={styles.discsContainer}> 
                     {postData.map((post: any) => {
                         return <CardDisc 
+                            key={post.discId}
                             title={post.discTitle}
                             desc={post.discDescription}
                             price={post.discValue}
