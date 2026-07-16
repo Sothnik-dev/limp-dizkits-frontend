@@ -1,13 +1,30 @@
 import styles from './cardDisc.module.css'
+import { GetApiValue } from '@/app/page';
+
+import TagComponent from '../tag/tagComponent';
+
+const postData = await GetApiValue();
 
 const CardDisc = (props: any) => {
     return(
         <div className={styles.cardContainer}>
             <div className={styles.spaceCenter}>
                 <img className={styles.mainImage} src={props.img} alt="mainImage" />
-                <img className={styles.discImage} src="/vinilBaseupd.png" alt="vinil disc" />
-                <img className={styles.innerImage} src={props.img} alt="innerImage" />
-                <div className={styles.discPoint}></div>
+                <div id={styles.discContainer}>
+                    <img className={styles.discImage} src="/vinilBaseupd.png" alt="vinil disc" />
+                    <img className={styles.innerImage} src={props.img} alt="innerImage" />
+                    <div className={styles.discPoint}></div>
+                </div>
+            </div>
+            <div>
+                <div className={styles.tagContainer}>
+                    {postData.map((post: any) => {
+                        return <TagComponent
+                            key={post.discId}
+                            tagValue={post.discTags[0]}
+                        />
+                    })}
+                </div>
             </div>
             <div>
                 <div>

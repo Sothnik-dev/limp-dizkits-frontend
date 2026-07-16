@@ -4,9 +4,9 @@ import styles from '../styles/page.module.css'
 
 import Image from 'next/image';
 
-import CardDisc from '@/components/cardDisc';
+import CardDisc from '@/components/card/cardDisc';
 
-async function GetApiValue() {
+export async function GetApiValue() {
     const apiValue = await axios.get('http://localhost:8080/disc/all')
     return apiValue.data;
 }

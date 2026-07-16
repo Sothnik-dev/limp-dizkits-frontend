@@ -1,15 +1,25 @@
 .cardContainer {
     width: 400px;
-    height: 550px;
+    height: 570px;
 
     background-color: #FAF4F4;
     filter: drop-shadow(0px 0px 2px #000000);
 
     border-radius: 12px;
 
-    margin-left: 1rem;
+    margin-left: 1.5rem;
 
     font-size: 12px;
+}
+
+.cardContainer:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
+}
+
+.cardContainer:not(.cardContainer:hover){
+    transition: 0.5s;
+    transform: scale(1);
 }
 
 .mainImage {
@@ -26,8 +36,34 @@
     0% {
         transform: rotate(0deg);
     } 100% {
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
     }
+}
+
+@keyframes wigle {
+    0% {
+        transform: rotate(25deg);
+    } 25% {
+        transform: rotate(-25deg);
+    }  50% {
+        transform: rotate(25deg);
+    } 75% {
+        transform: rotate(-25deg);
+    } 100% {
+        transform: rotate(0deg);
+    }
+}
+
+#discContainer{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 210px;
+    height: 140px;
+
+    cursor: pointer;
 }
 
 .discImage {
@@ -38,17 +74,21 @@
 
 .innerImage{
     position: absolute;
+
     width: 45px;
     height: 45px;
 
     border-radius: 5rem;
 }
 
-
-
-.discImage:hover{
+#discContainer:hover{
     animation: rollingAnim 5s infinite linear;
 }
+
+#discContainer:not(#discContainer:hover) {
+    animation: wigle 0.5s linear;
+}
+
 
 .discPoint {
     position: absolute;
@@ -64,7 +104,7 @@
     font-size: 2rem;
 
     margin-top: 6px;
-    padding: 6px;
+    padding: 10px;
 }
 
 .desc {
@@ -112,4 +152,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.tagContainer {
+    display: flex;
 }

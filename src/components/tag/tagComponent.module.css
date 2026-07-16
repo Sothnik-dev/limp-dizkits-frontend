@@ -1,0 +1,12 @@
+#tagCapsule {
+    font-size: 6px;
+
+    background-color: rgb(211, 3, 3);
+    border-radius: 12px;
+
+    margin-left: 6px;
+    margin-top: 6px;
+    padding: 6px;
+
+    cursor: default;
+}
